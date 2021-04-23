@@ -151,14 +151,10 @@ function greeting(fName, lName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-  class Cuboid{
-    constructor(length, width, height){
-      this.length = length;
-      this.width = width;
-      this.height = height;
-    };
-  };
+function CuboidMaker(len, wid, hei){  
+    this.length = len.length;
+    // this.width = wid.width;
+    // this.height = hei.height;
 };
 
 
@@ -166,7 +162,9 @@ function CuboidMaker(length, width, height){
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+CuboidMaker.prototype.volume = function(){
+  return this.height * this.width * this.length;
+}
 
 
 
@@ -175,7 +173,9 @@ function CuboidMaker(length, width, height){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-
+  CuboidMaker.prototype.surfaceArea = function(){
+    return (this.length * this.width) + (this.length * this.height) + (this.height * this.width);
+  };
 
 
 
@@ -183,7 +183,11 @@ function CuboidMaker(length, width, height){
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-
+const cuboid1 = new CuboidMaker ({
+  length: 4,
+  width: 5,
+  height: 5,
+});
 
 
 
@@ -196,7 +200,17 @@ function CuboidMaker(length, width, height){
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
+  constructor(attrs){
+    this.height = attrs.height;
+    this.width = attrs.width;
+    this.length = attrs.length 
+  }
+  surfaceArea(){
+    return (this.length * this.width) + (this.length * this.height) + (this.height * this.width);
+  };
 
+  volume(){
+    return this.height * this.width * this.length;
 }
 
 
