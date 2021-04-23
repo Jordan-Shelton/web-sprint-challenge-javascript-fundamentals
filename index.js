@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
-
+function summation(num) {
+  let count = 0;
+  for (let i = 0; i <= num; i++) {
+   count += i;
   }
- 
+ return count;
+ };
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -67,9 +70,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function lowerCaseNames(zooAnimals){
+    const smallNames =zooAnimals.map((item) => item.animal_name.toLowerCase())
+    return smallNames;
+     };
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -77,9 +81,12 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function lowPopulationAnimals(zooAnimals){
+    const newArray = zooAnimals.filter((low) => {
+      return `${low.population > 5}`;
+    });
+    return newArray;
+  };
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -88,8 +95,9 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(zooAnimals){
+    const totalPop = zooAnimals.reduce((a,b)=> a + b.population,0)
+    return totalPop;
   }
   
   
@@ -143,9 +151,15 @@ function greeting(fName, lName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
-}
+function CuboidMaker(length, width, height){
+  class Cuboid{
+    constructor(length, width, height){
+      this.length = length;
+      this.width = width;
+      this.height = height;
+    };
+  };
+};
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
