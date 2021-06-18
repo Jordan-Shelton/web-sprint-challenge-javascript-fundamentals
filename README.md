@@ -29,7 +29,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
-They both make a new array. But .forEach is looking for a true or false to decide what goes into the new array. .map is putting anything after the return statement into the new array
+.forEach doesn't return a new array. But .forEach is looking for a true or false to decide what goes into the new array. .map is putting anything after the return statement into the new array
 
 2. Explain the difference between a callback and a higher order function.
 
