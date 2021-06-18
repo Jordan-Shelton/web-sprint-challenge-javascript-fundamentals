@@ -29,13 +29,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+They both make a new array. But .forEach is looking for a true or false to decide what goes into the new array. .map is putting anything after the return statement into the new array
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is a function used as an argument in another function. A higher order function takes in a function as an argument.
 
 3. What is closure?
 
+Closure is when a function reaches outside of its scope for a value.
+
 4. Describe the four rules of the 'this' keyword.
 
+1.)Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
+2.)Whenever a function is called by a preceding dot, the object before that dot is this.
+3.)Whenever a constructor function is used, this refers to the specific instance of the object this is created and returned by the constructor function.
+4.)Whenever JavaScrip's call or apply method is used, this is explicitly defined.
+
 5. Why do we need super() in an extended class?
+
+It tells the class to take on the parent classes key/value pairs.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
