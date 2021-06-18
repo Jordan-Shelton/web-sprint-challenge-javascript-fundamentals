@@ -60,12 +60,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  
-  const newArray = []
   function animalNames(){
-    zooAnimals.forEach((animalName, sciName) => newArray.push(animalName.animal_name, sciName.scientific_name)
-  )};
-  
+    const names = [];
+    zooAnimals.forEach(function(item){
+      return names.push(`${item.scientific_name}${item.animal_name}`);
+    });
+    return names
+  }
+ 
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -133,7 +135,7 @@ function multiply(num1, num2){
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
  function greeting(first, last){
-  return `'Hello ${first} ${last}, nice to meet you!'`
+  return `Hello ${first} ${last}, nice to meet you!`
  }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
